@@ -51,12 +51,16 @@ namespace TextParser
             {
                 switch (search)
                 {
+                    // Find the first Global as the starting point.
                     case SearchState.FindGlobalRX:
                         {
                             global = readLine;
                             search = SearchState.FindFirstTX;
                         }
                         break;
+
+                    // Next find the TX out of order and save
+                    // This has special handling for the first version
 
                     case SearchState.FindFirstTX:
                         if (readLine.Contains("TX"))
