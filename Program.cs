@@ -14,8 +14,10 @@ namespace TextParser
     {
         static void Main(string[] args)
         {
-            // if (CheckArguments(args) == false)
-            //  return;
+             if (CheckArguments(args) == false)
+                  return;
+
+            CheckArguments(args);
 
             var inputFile = "qcom_in.txt";
             var outputFile = "qcom_out.txt";
