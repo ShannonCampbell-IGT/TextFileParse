@@ -57,6 +57,7 @@ namespace TextParser
                             search = SearchState.FindFirstTX;
                         }
                         break;
+
                     case SearchState.FindFirstTX:
                         if (readLine.Contains("TX"))
                         {
@@ -83,11 +84,8 @@ namespace TextParser
 
                     case SearchState.FindFirstRX:
                         if (readLine.Contains("RX : 01"))
-                        {
                             firstrx = readLine;
-                        }
-
-                        //case SearchState.WriteFile:
+                                                                        
                         if (!firstgo)
                         {
                             File.AppendAllText(outputFile, global + "\n");
