@@ -1,6 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System;
-
 namespace TextParser
 {
     enum SearchState
@@ -17,7 +15,7 @@ namespace TextParser
         static void Main(string[] args)
         {
             // if (CheckArguments(args) == false)
-          //  return;
+            //  return;
 
             var inputFile = "qcom_in.txt";
             var outputFile = "qcom_out.txt";
@@ -72,7 +70,7 @@ namespace TextParser
                                 {
                                     firsttx = secondtx;
                                     secondtx = readLine;
-                                }                                   
+                                }
                             }
                             else
                             {
@@ -87,10 +85,9 @@ namespace TextParser
                         if (readLine.Contains("RX : 01"))
                         {
                             firstrx = readLine;
-                    //        search = SearchState.WriteFile;
                         }
 
-                    //case SearchState.WriteFile:
+                        //case SearchState.WriteFile:
                         if (!firstgo)
                         {
                             File.AppendAllText(outputFile, global + "\n");
@@ -100,7 +97,7 @@ namespace TextParser
                                 File.AppendAllText(outputFile, firsttx + "\n");
                                 firsttx = string.Empty;
                             }
-                                                 
+
                         }
                         search = SearchState.FindGlobalRX;
                         firstgo = false;
