@@ -17,10 +17,8 @@ namespace TextParser
              if (CheckArguments(args) == false)
                   return;
 
-            CheckArguments(args);
-
-            var inputFile = "qcom_in.txt";
-            var outputFile = "qcom_out.txt";
+            var inputFile = args[0];
+            var outputFile = args.Length > 1 ? args[1] : inputFile + ".parsed";
             ParseComlabEGMInput(inputFile, outputFile);
         }
         static bool CheckArguments(string[] args)
@@ -30,7 +28,7 @@ namespace TextParser
                 Console.WriteLine("Usage:");
                 Console.WriteLine("       ComlabParser <input-file> [output-file].");
                 Console.WriteLine("Where:");
-                Console.WriteLine("       input-file:  Comlab RTB file to parse.");
+                Console.WriteLine("       input-file:  comlab RTB file to parse.");
                 Console.WriteLine("       output-file: Output file. If not specified, it is input-file with .parsed appended to the end.");
                 return false;
             }
