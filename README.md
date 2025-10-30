@@ -40,7 +40,7 @@ Or, after building, run the executable directly:
 
 ### Command-Line Arguments
 
-- `input-file` (required): Path to the Comlab RTB file to parse
+- `input-file` (required): Path to the comlab RTB file to parse
 - `output-file` (optional): Path to the output file. If not specified, defaults to the input filename with `.parsed` appended
 
 ### Examples

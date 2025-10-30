@@ -28,7 +28,7 @@ namespace TextParser
                 Console.WriteLine("Usage:");
                 Console.WriteLine("       ComlabParser <input-file> [output-file].");
                 Console.WriteLine("Where:");
-                Console.WriteLine("       input-file:  Comlab RTB file to parse.");
+                Console.WriteLine("       input-file:  comlab RTB file to parse.");
                 Console.WriteLine("       output-file: Output file. If not specified, it is input-file with .parsed appended to the end.");
                 return false;
             }
