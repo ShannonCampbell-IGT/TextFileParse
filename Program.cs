@@ -17,10 +17,8 @@ namespace TextParser
              if (CheckArguments(args) == false)
                   return;
 
-            CheckArguments(args);
-
-            var inputFile = "qcom_in.txt";
-            var outputFile = "qcom_out.txt";
+            var inputFile = args[0];
+            var outputFile = args.Length > 1 ? args[1] : inputFile + ".parsed";
             ParseComlabEGMInput(inputFile, outputFile);
         }
         static bool CheckArguments(string[] args)
